@@ -1,24 +1,26 @@
 import type{ NavItems } from './types'
 
+const base = import.meta.env.BASE_URL.slice(0, -1)
+
 export const NAV_ITEMS: NavItems = {
     home: {
-        path: '/',
+        path: `${base}/`,
         title: 'home'
     },
     blog: {
-        path: '/blog',
+        path: `${base}/blog`,
         title: 'blog'
     },
     tags: {
-        path: '/tags',
+        path: `${base}/tags`,
         title: 'tags'
     },
     media: {
-        path: '/media',
+        path: `${base}/media`,
         title: 'media'
     },
     about: {
-        path: '/about',
+        path: `${base}/about`,
         title: 'about'
     }
 }
