@@ -1,10 +1,12 @@
 ---
 import PostPreview from './PostPreview.astro'
 const { posts } = Astro.props
-const sortedPosts = posts.sort((a, b) => new Date(b.date) - new Date(a.date));
+// TODO: Add explicit types to satisfy TS type checker
+const sortedPosts = posts.sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date));
 ---
 <section class="post-preview__list">
     {sortedPosts.map((post) => (
+        <p>{JSON.stringify(post.frontmatter.date)}</p>
         <PostPreview post={post}/>
     ))}
 </section>
@@ -13,3 +15,4 @@ const sortedPosts = posts.sort((a, b) => new Date(b.date) - new Date(a.date));
         @apply flex flex-col gap-12
     }
 </style>
+    
