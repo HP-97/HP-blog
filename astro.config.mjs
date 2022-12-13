@@ -22,6 +22,7 @@ export default /** @type {import('astro').AstroUserConfig} */ ({
   // publicDir: './public',   // A folder of static files Astro will copy to the root. Useful for favicons, images, and other files that don’t need processing.
 
   site: 'https://hp-97.github.io', // Your public domain, e.g.: https://my-site.dev/. Used to generate sitemaps and canonical URLs.
+  base: '/HP-blog',
   server: {
     // port: 3000,         // The port to run the dev server on.
   },
