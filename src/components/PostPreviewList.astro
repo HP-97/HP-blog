@@ -6,7 +6,8 @@ const sortedPosts = posts.sort((a, b) => new Date(b.frontmatter.date) - new Date
 ---
 <section class="post-preview__list">
     {sortedPosts.map((post) => (
-        <p>{JSON.stringify(post.frontmatter.date)}</p>
+        //  XXX: Test value to see frontmatter value
+        // <p>{JSON.stringify(post.frontmatter.date)}</p>
         <PostPreview post={post}/>
     ))}
 </section>
